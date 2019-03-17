@@ -1,0 +1,6 @@
+<%= form_for post do |f| %>
+
+  <%= f.text_field :name %>
+  <%= f.text_area :content %>
+  <%= f.submit post.new_record? ? 'Créer' : "editer" %>
+<% end %>

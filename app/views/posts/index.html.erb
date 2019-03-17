@@ -1,0 +1,17 @@
+<h1>Posts#index</h1>
+
+
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <%= link_to post.name, post %>
+      -
+      <%= link_to "Editer", [:edit, post] %>
+      <%= link_to "Supprimer", post, method: :delete, data: {confirm: "Sur sur ? "} %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Créer article", :new_post %>
+
+<p></p>
